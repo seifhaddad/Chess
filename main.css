@@ -1,0 +1,17 @@
+table#chess_board {
+  border: 2px solid black;
+  max-width: 80%
+}
+
+tr td {
+  width: 3em;
+  height: 3em;
+}
+
+#chess_board tr:nth-child(odd) td:nth-child(even){
+  background-color: black;
+}
+
+#chess_board tr:nth-child(even) td:nth-child(odd){
+  background-color: black;
+}
