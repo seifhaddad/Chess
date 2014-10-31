@@ -1,6 +1,6 @@
-// Definitions of pieces
 
 
+// Definitions of piece object
 piece {
   "type": "",
   "color": "",
@@ -19,8 +19,23 @@ var kingB = {
 
 
 function selectPiece(){
+  var selected = document.getElementById("b2");
+
+document.addEventListener("click", function(){
+    var location;
+    var selected;
+    document.getElementById("b2").index = location;
+    document.getElementById("b2").object = location;
+});
+
+  // on clicking a space
+    // event listeners on every space??
+    // we need to identify which space we've clicked on -- function??
+    // return that spaces index [x, y]
+    // return if that space possesses an object
+    // ??? return [object.bking.name, object.bking.index[i][j]]
   td.addEventListener('click', isOccupied);
-  
+
   return selectPiece
 }
 
