@@ -1,4 +1,4 @@
-table#grid {
+table#chess_board {
   border: 5px solid black;
   max-width: 80%;
 }
@@ -6,12 +6,19 @@ table#grid {
 tr td {
   width: 5em;
   height: 5em;
+  text-align: center;
+  vertical-align: middle;
 }
 
-#grid tr:nth-child(odd) td:nth-child(even){
+#chess_board tr:nth-child(odd) td:nth-child(even){
   background-color: black;
 }
 
-#grid tr:nth-child(even) td:nth-child(odd){
+#chess_board tr:nth-child(even) td:nth-child(odd){
   background-color: black;
+}
+
+table img {
+  height: 50px;
+  width: 50px;
 }

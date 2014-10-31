@@ -1,5 +1,7 @@
 var $table = document.querySelector('#chess_board');
 
+var kingW = { color: "white", type: "king", img: "img/wking.png"};
+
 var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
@@ -7,7 +9,7 @@ var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
-                  [0, 0, 0, 0, 0, 0, 0, 0]];
+                  [0, 0, 0, 0, kingW, 0, 0, 0]];
 
   function boardCreator(boardArray){
     $table.innerHTML = "";
@@ -42,11 +44,21 @@ var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
   }
 
 
+/* POSSIBLE LOOP TO CHECK IF OBJECT THERE FOR VALID MOVES
+ * Loop through the board (for loop)
+ * if location !== object, insert 0
+ * run this loop each time a piece is moved to update board
+*/
+
 document.addEventListener('DOMContentLoaded', function(){
   boardCreator(boardArray);
+
+  var $A5 = document.querySelector('#A5');
+  var $img = document.createElement('img');
+  $A5.appendChild($img).setAttribute('src', kingW.img);
 });
 
-/* --- Creating Objects for pieces
+/* --- Creating Objects for pieces -------
 document.addEventListener('DOMContentLoaded', function(){
 var BishopW1, BishopW2 = { color: "white", type:"bishop", img: "img/wbishop.png"};
 var RookW1, RookW2 = { color: "white", type: "rook", img: "img/wrook.png"};
@@ -101,7 +113,7 @@ var KingB = {color: "black", type: "king", img: "img/bking.png"};
 
 
 
-/* KRIS WORK FROM 10/30/14
+/* ------- KRIS WORK FROM 10/30/14 --------
 var pawn = {type:"pawn",color:"white",position:"a1",image:"picture of pawn"};
 var chessboard=["a1","a2","a3","a4"];
         
