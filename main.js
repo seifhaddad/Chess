@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-<<<<<<< HEAD
   var matrix = [[RookB1, BishopB1, KnightB1, QueenB, KingB, KnightB2, BishopB2, RookB2],
  [pawnB1, pawnB2, pawnB3, pawnB4, pawnB5, pawnB6, pawnB7, pawnB8], 
 [0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0], [pawnW1, pawnW2, pawnW3, pawnW4, pawnW5, pawnW6, pawnW7, pawnW8],[RookW1, BishopW1, KnightW1, QueenW, KingW, KnightW2, BishopW2, RookW2]];
@@ -53,7 +52,6 @@ var QueenB = {color: "black", type: "queen"};
 var KingB = {color: "black", type: "queen"};
 /*black pieces*/
 
-=======
 
 var pawn = {type:"pawn",color:"white",position:"a1",image:"picture of pawn"};
 var chessboard=["a1","a2","a3","a4"];
@@ -75,5 +73,4 @@ console.log(chessboard);
         }
        }
 setBoard();
->>>>>>> 98b18d5fd2d9e4a09de417243183eba37c02413c
 });
