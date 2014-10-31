@@ -56,6 +56,21 @@ document.addEventListener('DOMContentLoaded', function(){
   var $A5 = document.querySelector('#A5');
   var $img = document.createElement('img');
   $A5.appendChild($img).setAttribute('src', kingW.img);
+
+  var clickedCell = document.querySelectorAll('td');
+
+  function selectPiece(boardArray){
+    for (var i = 0; i < boardArray.length; i++){
+      for (var j = 0; j < boardArray.length; j++){
+        clickedCell[i].addEventListener('click', function(){
+        // will need to return the ID from the TD that was clicked on
+        console.log("You clicked something");
+        });
+      }
+    }
+  }
+
+  selectPiece(boardArray);
 });
 
 /* --- Creating Objects for pieces -------
