@@ -46,6 +46,61 @@ document.addEventListener('DOMContentLoaded', function(){
   boardCreator(boardArray);
 });
 
+/* --- Creating Objects for pieces
+document.addEventListener('DOMContentLoaded', function(){
+var BishopW1, BishopW2 = { color: "white", type:"bishop", img: "img/wbishop.png"};
+var RookW1, RookW2 = { color: "white", type: "rook", img: "img/wrook.png"};
+
+var pawnW1, pawnW2, pawnW3, pawnW4, pawnW5, pawnW6, pawnW7, pawnW8 = {color: "white", type:"pawn", img: "img/wpawn.img"};
+
+var KnightW1, KnightW2 = { color: "white", type: "pawn", img: "img/wknight.png"};
+
+var QueenW = { color: "white", type: "queen",img: "img/wqueen.png"};
+
+var KingW = { color: "white", type: "king", img: "img/wking.png"};
+//black objects//
+
+var BishopB1, BishopB2 = {color: "black", type: "bishop", img: "img/bbishop.png"};
+
+var RookB1, RookB2 = { color: "black", type:"rook", img: "img/brook.png"};
+
+var pawnB1, pawnB2, pawnB3, pawnB4, pawnB5, pawnB6, pawnB7, pawnB8 = {color: "black", type: "pawn", img: "img/bpawn.png"};
+
+var KnightB1, KnightB2 = {color: "black", type: "pawn", img: "img/bknight.png"};
+
+var QueenB = {color: "black", type: "queen", img: "img/bqueen.png"};
+
+var KingB = {color: "black", type: "king", img: "img/bking.png"};
+  var matrix = [[RookB1, BishopB1, KnightB1, QueenB, KingB, KnightB2, BishopB2, RookB2],
+ [pawnB1, pawnB2, pawnB3, pawnB4, pawnB5, pawnB6, pawnB7, pawnB8], 
+[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0], [pawnW1, pawnW2, pawnW3, pawnW4, pawnW5, pawnW6, pawnW7, pawnW8],[RookW1, BishopW1, KnightW1, QueenW, KingW, KnightW2, BishopW2, RookW2]];
+ generateGrid(matrix);
+
+  function generateGrid(matrix){
+    var $table = document.querySelector('#grid');
+    $table.innerHTML = '';
+
+    matrix.forEach(function(row){ // first time, row => [0, 0, 0]
+      // create a tr for the row
+      var $tr = document.createElement('tr');
+      row.forEach(function(cell){ // first time, cell => 0
+        // cell goes into a new td
+        // thatteTableCell(cell); td goes into a tr
+        var $td = document.createElement('td');
+        $td.setAttribute('img',cell.img);
+        $tr.appendChild($td);
+        // alternative:
+        // $tr.appendChild( createTableCell(cell) );
+      });
+      // add that tr to the table
+      $table.appendChild($tr);
+     // function addImag(cell) {
+   });
+ } */
+
+
+
+
 /* KRIS WORK FROM 10/30/14
 var pawn = {type:"pawn",color:"white",position:"a1",image:"picture of pawn"};
 var chessboard=["a1","a2","a3","a4"];
