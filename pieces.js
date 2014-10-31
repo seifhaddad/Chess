@@ -1,5 +1,55 @@
 // Definitions of pieces
 
+
+piece {
+  "type": "",
+  "color": "",
+  "alive": "",
+  "location": "",
+  "image": ""
+};
+
+var kingB = {
+  "type": "king",
+  "color": "black",
+  "alive": "1",
+  "location": [1, 1],
+  "image": "img/bking.png"
+};
+
+
+function selectPiece(){
+  td.addEventListener('click', isOccupied);
+  
+  return selectPiece
+}
+
+function isOccupied(x, y){
+
+}
+
+function potential(selectPiece){
+    if piece.type === king {
+      var up-left = [x-1, y-1]
+      var up = [x, y-1]
+      var up-right = [x+1, y-1]
+      var left = [x-1, y]
+      var right = [x+1, y]
+      var down-left = [x-1, y+1]
+      var down = [x, y+1]
+      var down-right = [[x-1, y], [x+1, y]]
+
+    } else return
+}
+
+function destination(selectPiece){
+
+}
+
+function king(destination){
+
+}
+
 var kng = [[x-1, y-1], [x+1, y-1], /* up and left, up and right */
            [x-1, y+1], [x+1, y+1], /* down and left, down and right */
            [x, y-1], [x, y+1], /* straight up, straight down */
