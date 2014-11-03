@@ -57,7 +57,17 @@ document.addEventListener('DOMContentLoaded', function(){
   var $img = document.createElement('img');
   $A5.appendChild($img).setAttribute('src', kingW.img);
 
-  var clickedCell = document.querySelectorAll('td');
+  $('td').click(boardArray[0][1][2], function(){
+    // grab DATA from what you clicked
+    if (boardArray === 0){
+      console.log("This equals zero");
+    } else {
+      console.log("This equals something else");
+    }
+    // console log to check data
+  });
+  
+  /*var clickedCell = document.querySelectorAll('td');
 
   function selectPiece(boardArray){
     for (var i = 0; i < boardArray.length; i++){
@@ -70,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
-  selectPiece(boardArray);
+  selectPiece(boardArray);*/
 });
 
 /* --- Creating Objects for pieces -------
