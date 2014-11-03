@@ -2,21 +2,21 @@ var $table = document.querySelector('#chess_board');
 
 var kingW = { color: "white", type: "king", img: "img/wking.png"};
 
-var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
+var board = [[0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0],
-                  [0, 0, 0, 0, kingW, 0, 0, 0]];
+                  [0, 0, 0, 0, 0, 0, 0, 0]];
 
-  function boardCreator(boardArray){
+  function boardCreator(board){
     $table.innerHTML = "";
-    for (var i = 0; i < boardArray.length; i++){
+    for (var i = 0; i < board.length; i++){
       var $tr = document.createElement('tr');
       $table.appendChild($tr);
-      for (var j = 0; j < boardArray.length; j++){
+      for (var j = 0; j < board.length; j++){
         var $td = document.createElement('td');
         $tr.appendChild($td);
         if (i === 0){
@@ -38,7 +38,7 @@ var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
            $td.setAttribute('id', 'B' + [j+1]);
         } else if (i === 7) {
            $td.setAttribute('id', 'A' + [j+1]);
-        }      
+        }
       }
     }
   }
@@ -50,8 +50,10 @@ var boardArray = [[0, 0, 0, 0, 0, 0, 0, 0],
  * run this loop each time a piece is moved to update board
 */
 
+
+
 document.addEventListener('DOMContentLoaded', function(){
-  boardCreator(boardArray);
+  boardCreator(board);
 
   var $A5 = document.querySelector('#A5');
   var $img = document.createElement('img');
@@ -59,18 +61,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
   var clickedCell = document.querySelectorAll('td');
 
-  function selectPiece(boardArray){
-    for (var i = 0; i < boardArray.length; i++){
-      for (var j = 0; j < boardArray.length; j++){
-        clickedCell[i].addEventListener('click', function(){
-        // will need to return the ID from the TD that was clicked on
-        console.log("You clicked something");
-        });
+  // function selectPiece(board){
+  //   for (var i = 0; i < board.length; i++){
+  //     for (var j = 0; j < board.length; j++){
+  //       clickedCell[i].addEventListener('click', function(){
+  //       // will need to return the ID from the TD that was clicked on
+  //       console.log("You clicked something");
+  //       });
       }
     }
   }
 
-  selectPiece(boardArray);
+  selectPiece(board);
 });
 
 /* --- Creating Objects for pieces -------
@@ -99,7 +101,7 @@ var QueenB = {color: "black", type: "queen", img: "img/bqueen.png"};
 
 var KingB = {color: "black", type: "king", img: "img/bking.png"};
   var matrix = [[RookB1, BishopB1, KnightB1, QueenB, KingB, KnightB2, BishopB2, RookB2],
- [pawnB1, pawnB2, pawnB3, pawnB4, pawnB5, pawnB6, pawnB7, pawnB8], 
+ [pawnB1, pawnB2, pawnB3, pawnB4, pawnB5, pawnB6, pawnB7, pawnB8],
 [0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0], [pawnW1, pawnW2, pawnW3, pawnW4, pawnW5, pawnW6, pawnW7, pawnW8],[RookW1, BishopW1, KnightW1, QueenW, KingW, KnightW2, BishopW2, RookW2]];
  generateGrid(matrix);
 
@@ -131,10 +133,10 @@ var KingB = {color: "black", type: "king", img: "img/bking.png"};
 /* ------- KRIS WORK FROM 10/30/14 --------
 var pawn = {type:"pawn",color:"white",position:"a1",image:"picture of pawn"};
 var chessboard=["a1","a2","a3","a4"];
-        
+
 console.log(chessboard);
 //console.log(pawn.position)
-        
+
         function setBoard(){
          for (i=0;i<8;i++){
            for(j=0;j<8;j++){
@@ -149,4 +151,3 @@ console.log(chessboard);
         }
        }
 setBoard();*/
-
